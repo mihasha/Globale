@@ -1,0 +1,161 @@
+/*Hire US*/
+
+.section_hire{
+	width: 70%;
+	height: 600px;
+	display: block;
+	padding-top:100px;
+	
+	h2{
+		font-size: 30px;
+		color:white;
+		text-align: center;
+		margin-bottom: 50px;
+	}
+  
+ &-form{
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+}
+
+&-buttons1{
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  width: 100%;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+&-buttons2{
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  flex-direction: row;
+  width: 75%;
+  justify-content: space-around;
+  margin: 0 auto;
+}
+
+label{
+  display: block;
+  width: 200px;
+  position: relative;
+  color:white;
+  margin-bottom: 30px;
+  line-height: 50px;
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
+  border: 2px solid white;
+  cursor: pointer;
+  transition: background-color .2s ease-in-out, border-color .2s ease-in-out;
+
+  svg{
+    position: relative;
+    right: 5px;
+    width: 0;
+    fill: white;
+    color:white;
+    transition: width .2s ease-in-out;
+  }
+}
+input[type="checkbox"]{
+  display: none;
+}
+
+&:checked + label{
+  background-color: red;
+  border-color: red;
+}
+
+input[type="checkbox"]{
+  display: none;
+
+  &:checked + label{
+    background:blue;
+    border-color: blue;
+
+    svg{
+      color:white;
+      width: 15px;
+    }
+  }
+}
+
+&-information{
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 50px;
+  margin-top: 25px;
+
+  .information-name,
+  .information-email{
+    position: relative;
+    width: 45%;
+    height: 50px;
+    font-size: 30px;
+    font-weight: 300;
+
+    input[type="text"],
+    input[type="email"]{
+      width: 100%;
+      color:white;
+      font-size: 26px;
+      padding: 0 0 5px 0;
+      background-color: transparent;
+      border: none;
+      border-bottom: 1px solid white;
+      border-radius: 0;
+    }
+  }
+}
+.request{
+ margin:0 auto;
+ cursor: pointer;
+ display: block;
+ color:white;
+ font-weight: 700;
+ font-size: 16px;
+ text-transform:uppercase;
+ border:none;
+ height: 40px;
+ background: blue;
+ width:400px; 
+ max-width: 100%;
+}
+}
+/*Hire-end*/
+@media screen and (max-width: 900px) {
+  .section_hire{
+    width: 90%;
+    &-form{
+      display: flex;
+      justify-content: space-around;
+    }
+    &-buttons1{
+      flex-direction: column;
+      width: auto!important;
+      justify-content: center!important;
+    }
+    &-buttons2{
+      flex-direction: column;
+      width: auto!important;
+      justify-content: center;
+      margin: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 476px) {
+  .section_hire{
+    label{
+      width: 150px;
+      
+    }
+  }
+}

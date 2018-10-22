@@ -1,0 +1,176 @@
+/*About*/
+.section_about{
+	width: 70%;
+	height: 600px;
+	display: block;
+	position: relative;
+	padding-top:50px;
+
+	a{
+		color:white;
+		font-weight: 700;
+		font-size: 14px;
+		position: relative;
+		text-decoration:none;
+		text-transform: uppercase;
+		&:hover{
+			color:blue;
+			transition: all 0.2s ease-in-out;
+		}
+		.fa-arrow-right{
+			padding-left: 5px;
+		}
+	}
+	img{
+		position: absolute;
+		top: 0;
+		right: 0;
+		z-index:-1;
+	}
+
+	&-preview{
+		position: relative;
+		&:before{
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 190px;
+			transform: rotate(-25deg);
+			border: 5px solid #0f33ff;
+			border-right-color: transparent;
+			border-bottom-color: transparent;
+		}
+		&:after{
+			content: '';
+			position: absolute;
+			top: 35px;
+			left: 380px;
+			transform: rotate(-25deg);
+			border: 5px solid #0f33ff;
+			
+		}
+		h2{
+			font-size: 64px;
+			color:white;
+			font-weight:900;
+
+			&:before{
+				content: '';
+				position: absolute;
+				top: 72px;
+				left: 266px;
+				background: #0f33ff;
+				width: 30px;
+				height: 30px;
+				border-radius: 50%;
+			}
+			&:after{
+				content: '';
+				position: absolute;
+				top: 285px;
+				left: 245px;
+				width: 12px;
+				height: 12px;
+				background: #0f33ff;
+			}
+		}
+	}
+
+	&-points{
+		margin-top: 70px;
+		display: flex;
+		height: auto;
+		flex-direction: row;
+		justify-content: space-between;
+		max-width: 600px;
+		flex-wrap: wrap;
+
+		h3{
+			position: absolute;
+			top: 60px;
+			left: 0px;
+
+		}
+		a{
+			position: relative;
+			width: 150px;
+			height: 75px;
+			text-decoration: none;
+			color: #fff;
+			&:hover{
+				color:white;
+				cursor: pointer;
+				h3{
+					transition: 0.2s linear;
+					padding-top: 10px;
+				}
+			}
+			&:nth-child(1){
+				background: url(../img/winners.jpg)no-repeat;
+				background-position: center;
+				background-size: cover;
+				border: 10px solid #0f33ff;
+			} 
+			&:nth-child(2){
+				background: url(../img/philosophy.jpg)no-repeat;
+				background-position: center;
+				background-size: cover;
+				border: 10px solid #0f33ff;
+			} 
+			&:nth-child(3){
+				background: url(../img/history.jpg)no-repeat;
+				background-position: center;
+				background-size: cover;
+				border: 10px solid #0f33ff;
+			} 
+		}
+	}
+}
+/*About-end*/
+@media screen and (max-width: 900px) {
+	.section_about{
+		&-points{
+			a{
+				margin-bottom:50px;
+			}
+		}
+	}
+}
+@media screen and (max-width: 476px) {
+	.section_about{
+		&-preview{
+			&:before{
+				top: 0;
+				left: 190px;
+			}
+
+			&:after{
+				top: 35px;
+				left: 240px;
+			}
+
+			h2{
+				font-size: 42px;
+
+				&:before{
+					width: 25px;
+					height: 25px;
+					top: 43px;
+					left: 172px;
+				}
+
+				&:after{
+					top: 187px;
+					left: 164px;	
+				}
+			}
+
+		}
+		&-points{
+			flex-direction: column;
+			a{
+				justify-content:center;	
+			}
+		}
+	}
+}
